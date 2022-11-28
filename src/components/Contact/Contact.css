@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Gobold;
+    src:local('Gobold'), url("../../assets/assets/fonts/Product_Sans.ttf");
+  }
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container
+{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly ;
+    width: 24%;
+    height: 500px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-radius: 5px;
+}
+.sContainer
+{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+}
+.head{
+    font: Gobold;
+    font-size: 28px;
+}
+.contact{
+    margin-top: 30px;
+}
+.start{
+    /* background-color: aqua; */
+}
+.svg
+{
+    width: 160px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social{
+    margin-top: 40px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+}

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Gobold;
+    src:local('Gobold'), url("../../assets/assets/fonts/Product_Sans.ttf");
+  }
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+.journey{
+    margin-top: 60px;
+    width: 82%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    height: 58vh;
+    background-image: url('../../assets/assets/grass.jpeg');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* background: linear-gradient(to top,black,transparent); */
+    font-family: Gobold;
+    font-size: 70px;
+    z-index:20;
+
+    
+ 
+
+    
+}
+.journey2{
+    
+   display: flex;
+    width: 82%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    text-align:left;
+    /* background-color: black;
+    color: white; */
+
+}
+.desc
+{
+    font-family: Gobold; 
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+.bullet{
+     
+    width: 80px;
+    height: auto;
+}
+
+.margin{
+    margin-top: 20px;
+    margin-right: 3%;
+}
+img{
+   object-fit: cover;
+}
