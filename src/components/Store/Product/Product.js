@@ -56,11 +56,15 @@ export default function Product() {
   const pid = params.pid;
   const item = products[pid - 1];
 
-  const [list,setList] = useState([])
+  const [list,setList] = useState([item])
 
   const submitHandler = (e)=>{
     e.preventDefault();
-      setList(item);
+      setList([...list,item]);
+
+      const existingCart =  JSON.parse(localStorage.getItem("cart"));
+      const newCart = existingCart ? [...existingCart, item] : [item];
+      localStorage.setItem("cart",JSON.stringify(newCart));
   }
   return (
     <>
@@ -101,7 +105,7 @@ export default function Product() {
               <button className="product-btn dark"> add to cart</button>
             </div>
           </div>
-          <Cart list = {list} />
+          <Cart />
         </div>
       </form>
     </>

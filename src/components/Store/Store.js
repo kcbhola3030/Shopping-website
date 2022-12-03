@@ -159,7 +159,7 @@ export default function Store() {
             }
           </div>
         </div>
-        <Cart />
+        <Cart name={"amaan"}/>
       </div>
     </>
   );

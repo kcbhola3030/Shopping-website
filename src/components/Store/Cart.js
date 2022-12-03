@@ -2,8 +2,11 @@ import React from "react";
 import "./Store.css";
 import { FiShoppingBag } from "react-icons/fi";
 
-export default function Cart(props) {
-  console.log(props.list.img);
+
+const  Cart = () => {
+  const cart = JSON.parse(localStorage.getItem("cart"));
+  console.log(cart);
+
   return (
     <>
       <div className="cart cart2">
@@ -16,19 +19,26 @@ export default function Cart(props) {
 
         <div className="subhead">
           <center>
-            {props.list.length == 0 && "Whats stopping you, designer?"}
-            <div>
-              <div className="f-row">
-                {props.list.length != 0 && <img className="product-small-image lr" src={props.list.img} />}
+            
+            {!cart && "Whats stopping you, designer?"}
+            {
+              cart?.map((item)=>
+              <>
+                  <div>
+                    <div className="f-row">
+                      {<img className="product-small-image lr" src={ item.img } alt="image" />}
 
-                <div className="details f-column">
-                  <div className="subhead">{props.list.name}</div>
-                  <div className="cart-subhead">{props.list.manufacturer}</div>
-                  <br />
-                  <div className="cart-subhead">{props.list.length != 0 &&"Rs"} {props.list.price}/-</div>
-                </div>
-              </div>
-            </div>
+                      <div className="details f-column">
+                        <div className="subhead">{  item.name }</div>
+                        <div className="cart-subhead">{  item.manufacturer }</div>
+                        <br />
+                        <div className="cart-subhead">{ "Rs"} {  item.price}/-</div>
+                      </div>
+                    </div>
+                  </div>
+              </>
+              )
+            }
           </center>
         </div>
         <center>
@@ -38,3 +48,5 @@ export default function Cart(props) {
     </>
   );
 }
+
+export default Cart;
